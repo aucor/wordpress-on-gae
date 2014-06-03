@@ -1,9 +1,9 @@
 # General Jekyll Config
 pygments: true
-#url: http://example.com
+baseurl: /wordpress-on-gae/
 lsi: false
 exclude: [README.md, .gitignore]
-markdown:      kramdown
+markdown: kramdown
 
 # Theme customization - please change from the defaults!
 theme:

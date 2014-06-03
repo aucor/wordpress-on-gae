@@ -6,7 +6,7 @@ Our tips, tricks and some dirty secrets to make Wordpress production sites run s
 
 ### Table of contents:
 
-1. [Preface](/)
+1. [Preface]({{ site.baseurl }})
 
 
 - - -
