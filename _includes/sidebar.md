@@ -1,5 +1,7 @@
 # {{ site.theme.name }}
 
+<center><img src="assets/img/gae.png" alt="Aucor" style="margin-bottom: 15px;"></center>
+
 Our tips, tricks and some dirty secrets to make Wordpress production sites run smoothly  on Google App Engine.
 
 - - -
@@ -12,7 +14,7 @@ Our tips, tricks and some dirty secrets to make Wordpress production sites run s
 4. Speed optimizing
 5. Plugins
 6. Common errors
-7. Other resources
+7. [Other resources](/wordpress-on-gae/other-resources.html)
 8. Our wishlist
 
 
