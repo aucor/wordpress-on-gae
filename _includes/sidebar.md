@@ -7,7 +7,7 @@ Our tips, tricks and some dirty secrets to make Wordpress production sites run s
 ### Table of contents:
 
 1. [Preface]({{ site.baseurl }})
-2. Why GAE?
+2. [Why GAE?](/wordpress-on-gae/why-gae.html)
 3. Basics
 4. Speed optimizing
 5. Plugins
