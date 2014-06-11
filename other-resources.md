@@ -9,4 +9,4 @@ title: Other resources
 [Google Cloud Platform blog](http://googlecloudplatform.blogspot.fi/)<br>
 [WordPress starter project for GAE (Github)](https://github.com/GoogleCloudPlatform/appengine-php-wordpress-starter-project)
 
-
+Do you know other good resources? GitHub project is here, feel free to submit a [pull request](https://github.com/aucor/wordpress-on-gae/pulls).
