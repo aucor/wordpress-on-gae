@@ -23,8 +23,10 @@ These plugins are essential for using WordPress on a Google App Engine environme
 You cannot send mail from Google App Engine like you usually could on a normal VM environment. Mail requests are handled by Google. Due to this, it is generally wise to use external mail service. We use [SendGrid](http://sendgrid.com), and use [WP-Mail-SMTP plugin](http://wordpress.org/plugins/wp-mail-smtp/) to handle the mail traffic.
 
 
-##Gravity Forms 
+## <a name="gravityforms-gae-file-upload">Gravity Forms 
 [Gravity Forms](http://www.gravityforms.com) is an awesome plugin for creating forms on WordPress. However, we noticed that Gravity Forms doesn't support uploading files to Google Storage. We wrote our own plugin for enabling this.
+
+[Download plugin from WordPress.org](http://wordpress.org/plugins/gravityforms-file-upload-for-gae/)
 
 #Will not work on Google App Engine
 
