@@ -14,7 +14,7 @@ And it will always be so. App Engine and the whole Google Cloud expands and impr
 
 ## Contributing
 
-Have a better solution for something? Found an error? Some topic not covered? The sites source code is available at Github and we're more than glad to see some discussion there or even accept pull requests for the site.
+Have a better solution for something? Found an error? Some topic not covered? The sites source code is [available at Github](https://github.com/aucor/wordpress-on-gae) and we're more than glad to see some discussion there or even accept pull requests for the site.
 
 
 ## Disclaimer
