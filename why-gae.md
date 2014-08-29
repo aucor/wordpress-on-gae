@@ -3,7 +3,7 @@ layout: default
 title: Why GAE?
 ---
 
-If you want to know why we chose WordPress, read [this](why-we-chose-google-app-engine.html].
+If you want to know why we chose WordPress, read [this](/why-we-chose-google-app-engine.html].
 
 #Why Google App Engine
 
