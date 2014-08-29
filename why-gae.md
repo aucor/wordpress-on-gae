@@ -3,20 +3,22 @@ layout: default
 title: Why GAE?
 ---
 
+If you want to know why we chose WordPress, read [this](why-we-chose-google-app-engine.html].
 
-# Costs
+#Why Google App Engine
+
+## Costs
 Google App Engine is not cheap, but it has a very competitive cost structure considering the scalability and ease of use. 
 
 
-# Scalability
+## Scalability
 This is where the Google App Engine + WordPress shines. On our experience, we haven't had any problems with Google App Engine and WordPress scalability. Site can take easily 70 000 queries per second, without any performance issues. 
 
-# Security
+## Security
 
-# Easy and fast development
-On our company we didn't have the afford to use sysadmins to manage our servers. This was becoming a problem, because our hosting abilities didn't match our service level and quality. When we made the transition to Google App Engine, we had the possibility to focus on our core business – creating high quality web pages.
+## Easy and fast development
 
-# This is the future
+## This is the future
 
 Time of server tweaking is over. On our client segment (WordPress) there is no actual need to own/rent servers. Using a PaaS like Google App Engine is the best way to create robust and reliable solutions for the modern world.
 
