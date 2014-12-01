@@ -11,6 +11,7 @@ Our tips, tricks and some dirty secrets to make Wordpress production sites run s
 1. [Preface]({{ site.baseurl }})
 2. [Why GAE?](/wordpress-on-gae/why-gae.html)
 3. [Basics](/wordpress-on-gae/basics.html)
+3. [Going live](/wordpress-on-gae/going-live.html)
 4. [Speed optimizing](/wordpress-on-gae/speed-optimization.html)
 5. [Plugins](/wordpress-on-gae/plugins.html)
 6. [Common errors](/wordpress-on-gae/common-errors.html)

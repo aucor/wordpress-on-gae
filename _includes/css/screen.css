@@ -32,13 +32,19 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 28px;
   line-height: 30px;
 }
 
 h3 {
   font-size: 21px;
   line-height: 24px;
+  margin: 1em 0 0.5em;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 18px;
   margin: 1em 0;
 }
 
