@@ -1,5 +1,5 @@
 # General Jekyll Config
-pygments: true
+hightlighter: pygments
 baseurl: /wordpress-on-gae/
 lsi: false
 exclude: [README.md, .gitignore]
