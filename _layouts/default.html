@@ -19,8 +19,15 @@
 <body>
   <div class="container">
     <div class="four columns sidebar">
+      <h1 class="site-title">{{ site.theme.name }}</h1>
+      <div id="sidebar-inner">
       {% capture sidebar %}{% include sidebar.md %}{% endcapture %}
       {{ sidebar | markdownify }}
+      </div>
+      <button type="button" role="button" aria-label="Toggle Navigation" class="lines-button x" id="navigation-toggle">
+        <span class="lines"></span>
+      </button>
+
     </div>
 
     <div class="eleven columns content">
@@ -35,7 +42,25 @@
       </div>
     </div>
   </div>
+  <script>
+    var open = false,
+        anchor = document.getElementById("navigation-toggle"),
+        sidebar = document.getElementById("sidebar-inner");
 
+    anchor.addEventListener('click', function(event){
+        event.preventDefault();
+        if(!open){
+          anchor.classList.add('open');
+          sidebar.classList.add('open');
+          open = true;
+        }
+        else{
+          anchor.classList.remove('open');
+          sidebar.classList.remove('open');
+          open = false;
+        }
+      });
+  </script>
 {% include analytics.html %}
 </body>
 </html>

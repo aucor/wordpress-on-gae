@@ -109,8 +109,17 @@ ul.posts span {
   overflow: hidden;
 }
 
+.sidebar h1 {
+  font-size: 24px;
+  line-height: 1.25;
+}
+
 .sidebar h1, .sidebar h2 {
   text-align: center;
+}
+
+.sidebar img {
+  margin: 0 auto 15px;
 }
 
 .sidebar hr {
@@ -151,6 +160,7 @@ ul.posts span {
 .sidebar {
   padding-top: 25px;
   font-family: "open sans", sans-serif;
+  position: relative;
 }
 
 .sidebar p {
@@ -159,6 +169,10 @@ ul.posts span {
 
 .sidebar a {
   font-weight: 600;
+}
+
+#navigation-toggle {
+  display: none;
 }
 
 .content {
@@ -233,7 +247,11 @@ i.fa-hn {
   text-decoration: none;
 }
 
-.disclaimer p {
+.footer img {
+  margin: 0 auto;
+}
+
+.disclaimer {
   margin-top: 5px;
   font-size: 11px;
   text-align: center;
@@ -257,4 +275,84 @@ i.fa-hn {
   text-align: center;
   font-size: smaller;
   padding-bottom: 10px
+}
+
+/* Lines button from Sara: https://github.com/SaraSoueidan/navicon-transformicons */
+.lines-button {
+  display: inline-block;
+  border: none !important;
+  background: none !important;
+  padding: 0;
+  transition: .3s;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0;
+  will-change: transform, opacity;
+  /* */
+}
+.lines-button:hover {
+  opacity: 1;
+}
+.lines-button:active {
+  transition: 0;
+}
+.lines-button:focus {
+  outline: 0; 
+}
+.lines {
+  display: inline-block;
+  width: 2rem;
+  height: 0.25rem;
+  background: #fff;
+  transition: 0.3s;
+  position: relative;
+  will-change: background;
+}
+.lines:before, .lines:after {
+  display: inline-block;
+  width: 2rem;
+  height: 0.25rem;
+  background: #fff;
+  transition: 0.3s;
+  position: absolute;
+  left: 0;
+  content: '';
+  -webkit-transform-origin: 0.14285rem center;
+  transform-origin: 0.14285rem center;
+}
+.lines:before {
+  will-change: transform;
+  -webkit-transform: translateY(0.6rem);
+  transform: translateY(0.6rem);
+}
+.lines:after {
+  will-change: transform;
+  -webkit-transform: translateY(-0.6rem);
+  transform: translateY(-0.6rem);
+}
+
+.lines-button:hover .lines:before {
+  -webkit-transform: translateY(0.7rem);
+  transform: translateY(0.7rem);
+}
+.lines-button:hover .lines:after {
+  -webkit-transform: translateY(-0.7rem);
+  transform: translateY(-0.7rem);
+}
+
+.lines-button.x.open .lines {
+  background: transparent;
+}
+.lines-button.x.open .lines:before, .lines-button.x.open .lines:after {
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  width: 2rem;
+}
+.lines-button.x.open .lines:before {
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+.lines-button.x.open .lines:after {
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+  transform: rotate3d(0, 0, 1, -45deg);
 }
