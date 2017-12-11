@@ -3,13 +3,13 @@ layout: default
 title: Building the site
 ---
 
-##Image styles
+## Image styles
 
 Since we can't write to the disk on GAE, uploads are stored in Google Cloud Storage (GCS). The App Engine plugin takes care of uploading the images into the bucket and generating the public urls for them. Every image gets a default url in form of <code>http://<em>bucketname</em>.storage.googleapis.com/<em>filename.jpg</em></code>. But when embedded into a post or displayed through <code>post_thumbnail</code> functions the plugin fetches the gibberish and unpronounceable CDN powered public serving url based on the image style.
 
 Unlike in "regular" WordPress installations the different image style files are not generated when the image is uploaded. Instead only the original file is stored in the bucket and the different sized are generated (and cached until eternity) on the first request somewhere in the GCS internals. And at this point we sometimes reach the limits of the image handling capabilities of the GCS. The following might not affect your site at all, especially if your editing the images to right dimensions before uploading, but sometimes we have found these a bit confusing and disturbing.
 
-###Resizing
+### Resizing
 
 In GCS the images can be [resized or cropped](https://cloud.google.com/appengine/docs/php/refdocs/files/google.appengine.api.cloud_storage.CloudStorageTools#\google\appengine\api\cloud_storage\CloudStorageTools::getImageServingUrl()), but only with one dimensional argument. So when resizing only the longer dimension of the image style is used as the argument. e.g. with image style specified as 600px wide and 400px tall (with no force crop), you'll normally get an image that in its original aspect ratio fits inside a 600&times;400 box, but in GCS it will be fitted into a 600&times;600 box. See the following image for a couple more problematic examples.
 
@@ -17,7 +17,7 @@ In GCS the images can be [resized or cropped](https://cloud.google.com/appengine
 
 <small>Photo credit: Anssi Koskinen / Aucor Oy</small>
 
-###Force crop and a workaround using intrinsic ratios
+### Force crop and a workaround using intrinsic ratios
 
 Cropping is even worse. GCS can only crop images into a square using the longer dimension of the image style as the size argument. The result is far from expected behaviour of WordPress' image styles. See the image below for examples.
 
@@ -40,7 +40,7 @@ As an example we have a featured image spot that is 500px wide and 200px tall. N
   padding-bottom: percentage(200/500); // Alter this to match the desired aspect ratio
   position: relative;
   overflow: hidden;
-  
+
   img {
     // The absolute center everything trick: http://www.smashingmagazine.com/2013/08/09/absolute-horizontal-vertical-centering-css/
     position: absolute;
@@ -55,12 +55,12 @@ As an example we have a featured image spot that is 500px wide and 200px tall. N
 <p>See the Pen <a href='http://codepen.io/underdude/pen/NPbRJa/'>Force an image to specific size using intrinsic ratio</a> by Janne Ala-Äijälä (<a href='http://codepen.io/underdude'>@underdude</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 </div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-###Conclusions
+### Conclusions
 
 And as a bonus the GCS generated image sizes are limited to 1600px. This probably won't affect unless your having huge full size background image sliders with superb retina resolution images that are managed from the WordPress admin. And that might be a bad idea anyway.
 
 So when setting up image styles (or when some plugin sets up its own ones) know the limits of GCS.
 
-###And one more thing: The devserver issue
+### And one more thing: The devserver issue
 
 It's important to notice that in local development environment, the plugin always returns the url of the original image. This means that the image isn't resized nor cropped accordingly to the desired image style. This may cause some unexpected situations when developing or deploying so be careful.
